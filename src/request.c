@@ -49,7 +49,8 @@
 #define S3_SHA256_DIGEST_LENGTH SHA256_DIGEST_LENGTH
 #endif
 
-#define USER_AGENT_SIZE 256
+#define USER_AGENT_SIZE 126 + sizeof(((struct utsname*)0)->sysname) \
+                            + sizeof(((struct utsname*)0)->machine)
 #define REQUEST_STACK_SIZE 32
 #define SIGNATURE_SCOPE_SIZE 64
 
