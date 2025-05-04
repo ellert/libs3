@@ -110,7 +110,7 @@ typedef struct RequestParams
     void *callbackData;
 
     // Request timeout. If 0, no timeout will be enforced
-    int timeoutMs;
+    long timeoutMs;
 } RequestParams;
 
 
